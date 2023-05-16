@@ -1,3 +1,4 @@
+import { Button } from './components/lib-ui/button';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -8,15 +9,21 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+} from './components/lib-ui/alert-dialog';
+import { NavBar } from './components/ui/NavBar';
+import Transactions from './components/ui/Transactions';
+import { useToast } from './components/lib-ui/use-toast';
 
 function App() {
+  const { toast } = useToast();
   return (
-    <div class="h-screen w-screen flex items-center justify-center">
-      <AlertDialog>
+    <>
+      <div className='h-screen w-screen '>
+        <NavBar />
+        <Transactions />
+        {/* <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button variant="outline">Show Dialog</Button>
+          <Button variant='default'>Show Dialog</Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -31,8 +38,9 @@ function App() {
             <AlertDialogAction>Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
-    </div>
+      </AlertDialog> */}
+      </div>
+    </>
   );
 }
 

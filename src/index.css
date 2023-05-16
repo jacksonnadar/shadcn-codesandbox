@@ -1,14 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.html{
+  color: hsl(130, 4%, 29%);
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted:162, 38%, 95%;
+    --muted-foreground: 130, 4%, 29%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
@@ -22,10 +24,10 @@
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary:162, 38%, 95%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --accent: 210 40% 96.1%;
+    --accent:162, 38%, 95%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 100% 50%;
