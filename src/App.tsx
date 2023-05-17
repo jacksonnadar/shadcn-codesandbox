@@ -13,6 +13,7 @@ import {
 import { NavBar } from './components/ui/NavBar';
 import Transactions from './components/ui/Transactions';
 import { useToast } from './components/lib-ui/use-toast';
+import { Toaster } from './components/lib-ui/Toaster';
 
 function App() {
   const { toast } = useToast();
@@ -39,6 +40,7 @@ function App() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog> */}
+        <Toaster />
       </div>
     </>
   );
