@@ -35,9 +35,11 @@ import {
   LogOut,
   Mail,
   MessageSquare,
+  Moon,
   Plus,
   PlusCircle,
   Settings,
+  Sun,
   User,
   UserPlus,
   Users,
@@ -89,13 +91,21 @@ const emailTemplates = [
   },
 ];
 
+const setTheme = (theme: string) => {
+  if (theme === 'DARK') {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+};
+
 export function NavBar() {
   const { toast } = useToast();
   return (
     <div className='shadow border-b-2 h-14 flex justify-between w-screen'>
       <div className='flex'>
         <div className='h-full p-2'>
-          {/* <img src={logo} className='h-full' alt='' /> */}
+          <img src={logo} className='h-full' alt='' />
         </div>
         <NavigationMenu>
           <NavigationMenuList>
@@ -141,21 +151,33 @@ export function NavBar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuLink
-                onClick={() => {
-                  toast({
-                    title: 'Scheduled: Catch up ',
-                    description: 'Friday, February 10, 2023 at 5:57 PM',
-                  });
-                }}
-                className={navigationMenuTriggerStyle()}>
-                Add to calendar
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                E Concent
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className='flex justify-center items-center h-full mr-4'>
+      <div className='flex justify-center gap-3 items-center h-full mr-4'>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Moon className='h-6 w-6' />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className='w-56'>
+            <DropdownMenuLabel>Theme</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <DropdownMenuItem onClick={() => setTheme('DARK')}>
+                <Moon className='mr-2 h-4 w-4' />
+                <span>Dark Mode</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme('Light')}>
+                <Sun className='mr-2 h-4 w-4' />
+                <span>Light Mode</span>
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <DropdownMenu>
           <DropdownMenuTrigger>
             {' '}

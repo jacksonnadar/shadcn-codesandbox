@@ -16,7 +16,6 @@ import { useToast } from './components/lib-ui/use-toast';
 import { Toaster } from './components/lib-ui/Toaster';
 
 function App() {
-  const { toast } = useToast();
   return (
     <>
       <div className='h-screen w-screen '>
