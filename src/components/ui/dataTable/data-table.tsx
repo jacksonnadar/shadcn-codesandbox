@@ -244,7 +244,7 @@ export function DataTable<TData, TValue>({
           </div>
         </div>
 
-        <div className='w-1/4 flex gap-3'>
+        <div className='w-1/4 flex gap-3 justify-end'>
           <Button variant={'outline'}>Download</Button>
           <Button variant={'default'}>Update</Button>
         </div>
