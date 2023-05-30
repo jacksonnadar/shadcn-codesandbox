@@ -68,7 +68,7 @@ for (let i = 0; i < 10; i++) {
 
 export default function Transactions() {
   return (
-    <div className='container mx-auto py-10'>
+    <div className='container mx-auto py-10 min-w-full'>
       <DataTable columns={columns as any} data={data} />
     </div>
   );
